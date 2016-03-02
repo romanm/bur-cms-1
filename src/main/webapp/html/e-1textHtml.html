@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="sah1App" ng-controller="sah1Ctrl">
+<head>
+<title>sah1 edit</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/v/lib/css/font-awesome.min.css">
+<link rel="stylesheet" href="/v/lib/css/bootstrap.css">
+<link href="/v/css/w3c-bs-company.css" rel="stylesheet" type="text/css">
+<link href="/v/css/w3c-bs-company-002.css" rel="stylesheet"
+	type="text/css">
+<link href="/v/css/w3c-bs-company-003.css" rel="stylesheet"
+	type="text/css">
+<link href="/v/css/w3c-bs-company-004.css" rel="stylesheet"
+	type="text/css">
+<link rel="stylesheet" href="/v/css/local.css">
+<script style="" src="/v/lib/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="/v/lib/js/angular.min.js"></script>
+<script type="text/javascript" src="/v/lib/js/textAngular-rangy.min.js"></script>
+<script type="text/javascript"
+	src="/v/lib/js/textAngular-sanitize.min.js"></script>
+<script type="text/javascript" src="/v/lib/js/textAngular.min.js"></script>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"> <span
+					class="glyphicon glyphicon-home" aria-hidden="true"> </span> САХ /
+				</a> <a class="navbar-brand" title="до початку сторінки" href="#top"><span
+					class="glyphicon glyphicon-chevron-up"></span></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron jumbotron-edit text-center">
+		<h1>
+			<small> Редагування сторінки: </small><br/> {{pageObject.title}}
+		</h1>
+	</div>
+
+	<div class="container">
+		<div>
+			<button ng-click="saveJsonToFile()" class="btn btn-primary">запис</button>
+			| <a href="/v/{{pageKey}}">Перегляд</a> 
+		</div>
+		<div>
+			Заголовок: <input ng-model="pageObject.title">
+		</div>
+		<div text-angular ng-model="pageObject.html" name="demo-editor"
+			ta-text-editor-class="border-around container"
+			ta-html-editor-class="border-around"></div>
+	</div>
+
+	<div class="container-fluid">
+
+
+		<!-- Нижня меню частина -->
+		<div class="row bg-grey">
+			<div class="col-sm-1 form-group">
+				<span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+			</div>
+			<div class="col-sm-11 form-group">
+				<a class="btn btn-default" href="/html/file-load1.html">
+					Загрузка файлів </a> <a class="btn btn-default disabled"
+					href="/html/e-1textHtml.html"> Редагування сторінки </a> <a
+					class="btn btn-default" href="/html/site-map-editor.html"> Карта сайту </a> <a
+					href="/endlogin" class="btn btn-default pull-right"
+					title="завершити логін для редагування даних на сайті"> <span
+					class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+				</a>
+			</div>
+		</div>
+		
+	</div>
+	<footer class="container-fluid text-center">
+		<a href="#myPage" title="To Top"> <span
+			class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Сайт САХ створено <a href="http://algoritmed.com/"
+				title="Visit w3schools">www.algoritmed.com</a>
+		</p>
+	</footer>
+
+		<script type="text/javascript" src="/v/js/buh-cms1.js"></script>
+
+</body>
+</html>
+

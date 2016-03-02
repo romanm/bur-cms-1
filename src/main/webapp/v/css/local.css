@@ -1,0 +1,12 @@
+.jumbotron-edit {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+#myModal {
+top:5%;
+/*
+right:50%;
+outline: none;
+http://coolestguidesontheplanet.com/bootstrap/modal.php
+*/
+}
